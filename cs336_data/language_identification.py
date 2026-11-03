@@ -4,7 +4,8 @@ from typing import Any
 import fasttext
 from extract_documents import extract_documents
 
-model = fasttext.load_model("data/lid.176.bin")
+LANGUAGE_MODEL_PATH = "data/lid.176.bin"
+model = fasttext.load_model(LANGUAGE_MODEL_PATH)
 
 
 def identify_language(text) -> tuple[Any, float]:
